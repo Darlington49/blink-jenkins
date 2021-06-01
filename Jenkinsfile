@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                sh '$IDF_PATH/export.sh'
                 sh 'ls'
                 sh 'idf.py build'
             }
