@@ -1,10 +1,10 @@
 pipeline {
-    agent { docker { image 'espressif/idf:release-v4.1' } }
+    agent { docker { image 'node:14-alpine' } }
     stages {
         stage('build') {
             steps {
                 sh 'ls'
-                sh 'idf.py build'
+                sh 'sudo docker run --rm -v $PWD:/project -w /project espressif/idf:release-v4.1 idf.py build'
             }
         }
     }
