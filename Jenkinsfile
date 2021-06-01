@@ -1,9 +1,10 @@
 pipeline {
-    agent { docker { image 'espressif/idf:release-v4.1' } }
+    agent { docker { image 'node:14-alpine' } }
     stages {
         stage('build') {
             steps {
                 sh 'npm --version'
+                sh 'ls'
             }
         }
     }
