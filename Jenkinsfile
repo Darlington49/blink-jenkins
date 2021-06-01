@@ -9,7 +9,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'ls'
-                // sh 'idf.py build'
+                sh 'idf.py build'
             }
         }
     }
