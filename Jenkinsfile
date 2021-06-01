@@ -2,7 +2,7 @@ pipeline {
     agent { 
         docker { 
             image 'espressif/idf:release-v4.1'
-            args `--entrypoint='$IDF_PATH/export.sh'`
+            args '--entrypoint='
         } 
     }
     stages {
