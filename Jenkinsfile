@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'npm --version'
+                sh 'ls'
                 sh 'sudo docker run --rm -v $PWD:/project -w /project espressif/idf:release-v4.1 idf.py build'
             }
         }
