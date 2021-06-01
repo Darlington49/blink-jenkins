@@ -2,7 +2,7 @@ pipeline {
     agent { 
         docker { 
             image 'espressif/idf:release-v4.1'
-            args '--entrypoint='
+            args '--entrypoint=/entrypoint.sh'
         } 
     }
     stages {
