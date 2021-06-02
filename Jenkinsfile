@@ -1,9 +1,6 @@
 pipeline {
     agent { 
-        docker { 
-            image 'espressif/idf:release-v4.1'
-            args '--entrypoint='
-        } 
+        docker any
     }
     stages {
         stage('build') {
@@ -11,7 +8,7 @@ pipeline {
               //  sh 'chmod u+x my_script.sh $IDF_PATH/export.sh'
               //  sh 'sudo $IDF_PATH/export.sh'
                 sh 'ls'
-                sh 'idf.py build'
+               // sh 'idf.py build'
             }
         }
     }
